@@ -1,4 +1,4 @@
-const OPENROUTER_API_KEY = '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';
+const OPENROUTER_API_KEY = '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';
 
 export async function askQwen(messages) {
   const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
@@ -8,7 +8,7 @@ export async function askQwen(messages) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'qwen/qwen-2.5-72b-instruct',
+      model: 'qwen/qwen-2.5-7b-instruct',
       messages: messages,
       max_tokens: 500,
     }),
